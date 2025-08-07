@@ -3,21 +3,12 @@ import React, { useState, useEffect } from "react";
 import {
   Github,
   Linkedin,
-  Twitter,
   Mail,
-  Coffee,
-  Code,
-  Award,
   Briefcase,
-  Heart,
-  Phone,
-  Facebook,
-  User,
   X,
 } from "lucide-react";
 import {
   FaMedium,
-  FaDiscord,
   FaAws,
   FaReact,
   FaNodeJs,
@@ -27,7 +18,6 @@ import {
   FaPython,
 } from "react-icons/fa";
 import {
-  SiCashapp,
   SiDart,
   SiDiscord,
   SiExpress,
@@ -36,7 +26,6 @@ import {
   SiNestjs,
   SiNextdotjs,
   SiPostgresql,
-  SiSharp,
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
@@ -125,7 +114,6 @@ const Portfolio = () => {
     setDisplayedText("");
     setIsTyping(true);
 
-    // Typing effect
     const typeInterval = setInterval(() => {
       if (i < currentText.length) {
         setDisplayedText(currentText.slice(0, i + 1));
@@ -134,12 +122,11 @@ const Portfolio = () => {
         clearInterval(typeInterval);
         setIsTyping(false);
 
-        // Wait 2 seconds before moving to next quote
         setTimeout(() => {
           setCurrentQuote((prev) => (prev + 1) % funnyQuotes.length);
         }, 2000);
       }
-    }, 100); // Typing speed
+    }, 100);
 
     return () => clearInterval(typeInterval);
   }, [currentQuote]);
