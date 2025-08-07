@@ -131,20 +131,20 @@ const Portfolio = () => {
     return () => clearInterval(typeInterval);
   }, [currentQuote]);
 
-  const SkillBar = ({ skill, level }) => (
-    <div className="mb-3 group">
-      <div className="flex justify-between mb-1">
-        <span className="text-black font-black text-xs">{skill}</span>
-        <span className="text-amber-800 text-xs">{level}%</span>
-      </div>
-      <div className="w-full bg-amber-200 bg-opacity-20 rounded-full h-1.5 overflow-hidden">
-        <div
-          className="h-full bg-gradient-to-r from-amber-600 to-black rounded-full transition-all duration-1000 ease-out transform group-hover:scale-105"
-          style={{ width: `${level}%` }}
-        />
-      </div>
-    </div>
-  );
+  // const SkillBar = ({ skill, level }) => (
+  //   <div className="mb-3 group">
+  //     <div className="flex justify-between mb-1">
+  //       <span className="text-black font-black text-xs">{skill}</span>
+  //       <span className="text-amber-800 text-xs">{level}%</span>
+  //     </div>
+  //     <div className="w-full bg-amber-200 bg-opacity-20 rounded-full h-1.5 overflow-hidden">
+  //       <div
+  //         className="h-full bg-gradient-to-r from-amber-600 to-black rounded-full transition-all duration-1000 ease-out transform group-hover:scale-105"
+  //         style={{ width: `${level}%` }}
+  //       />
+  //     </div>
+  //   </div>
+  // );
 
   return (
     <div className="min-h-screen bg-[#FFFBF2]  from-amber-50 via-orange-50 to-yellow-100 relative overflow-hidden">
@@ -183,13 +183,9 @@ const Portfolio = () => {
               <h2 className="text-lg text-[#000000a1] font-semibold mb-3 flex items-center">
                 Who am I?
               </h2>
-              <p className="text-black leading-relaxed font-normal text-sm">
-                Passionate full-stack developer with a love for clean code and
-                creative solutions. I transform ideas into digital experiences,
-                one commit at a time. When I'm not coding, you'll find me
-                exploring new technologies or explaining why CSS is both amazing
-                and terrible.
-              </p>
+            <p className="text-black leading-relaxed font-normal text-sm">
+  {"Passionate full-stack developer with a love for clean code and creative solutions. I transform ideas into digital experiences, one commit at a time. When I'm not coding, you'll find me exploring new technologies or explaining why CSS is both amazing and terrible."}
+</p>
             </div>
 
             {/* Social Links */}
